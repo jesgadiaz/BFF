@@ -21,11 +21,6 @@ $ python bgp.py {instance} {n} {m} {plus}
 By setting plus to True, the algorithm is repeated n times and the best solution is returned.
 
 ## Example 1
-(base) PS C:\Users\perro\Documents> python bgp.py D:\GBP\dataset\line49nodes.mtx 49 48 False
----Floyd-Warshall running time: 0.10785794258117676 seconds ---
-burning sequence: [17, 48, 0, 32, 8, 40, 24, 4, 12]
-burning sequence length: 9
----BGP running time: 0.0 seconds ---
 
 ```
 $ python bgp.py D:\dataset\line49nodes.mtx 49 48 False
