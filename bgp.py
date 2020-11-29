@@ -1,40 +1,35 @@
 import random
 import sys
 import time
+import networkx as nx
 
 def createGraph(input_file):
-    global n, m, d, start_time
-    f = open(input_file, "r")
-    d = []
-    for i in range(0,n):
-        list = []
-        for j in range(0,n):
-            list.append(float("inf"))
-        d.append(list)
+    global G, n, m, d, start_time
     
+    G = nx.Graph()
+    for j in range(0,n):
+        G.add_node(j)
+   
+    f = open(input_file, "r")    
     string = f.readline()
     for i in range(0, m):        
         string = f.readline()
         string = string.split()
-        i = int(string[0]) - 1
-        j = int(string[1]) - 1
-        d[i][j] = 1
-        d[j][i] = 1
+        j = int(string[0])-1
+        k = int(string[1])-1
+        G.add_edge(j, k)
     f.close()
+        
+    sp = dict(nx.all_pairs_shortest_path_length(G))
     
-    # Floyd-Warshall
-    for i in range(0, n):
-        d[i][i] = 0
-    for i in range(0, n):
-        for j in range(0, n):
-            for l in range(0, n):
-                if d[i][j] == float("inf") or d[i][l] == float("inf"):
-                    cost = float("inf")
-                else:
-                    cost = d[i][j] + d[i][l]
-                if cost < d[j][l]:
-                    d[j][l] = cost
-    print("---Floyd-Warshall running time: %s seconds ---" % (time.time() - start_time))
+    d = []
+    for i in range(0,n):
+        list = []
+        for j in range(0,n):
+            list.append(sp[i][j])
+        d.append(list)
+        
+    print("---Compute all shortest paths - running time: %s seconds ---" % (time.time() - start_time))
     
 def update_distance():
     global n, d, distance, sequence
