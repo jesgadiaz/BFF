@@ -23,31 +23,31 @@ By setting plus to True, the algorithm is repeated n times and the best solution
 ## Example 1
 
 ```
-$ python bgp.py D:\dataset\line49nodes.mtx 49 48 False
+$ python bgp.py D:\dataset\squaredIdealBurn7.mtx 231 418 False
 ```
 
 The output shows a burning sequence and its length. The running time of the initialization phase (Floyd Warshall algorithm) and the running time of the 'burning greedy permutation' algorithm is showed too.
 
 ```
----Floyd-Warshall running time: 0.10785794258117676 seconds ---
-burning sequence: [17, 48, 0, 32, 8, 40, 24, 4, 12]
-burning sequence length: 9
+---Compute all shortest paths - running time: 0.18633675575256348 seconds ---
+burning sequence: [96, 101, 222, 0, 25, 109, 142, 179, 187, 23]
+burning sequence length: 10
 ---BGP running time: 0.0 seconds ---
 ```
 
 ## Example 2
 
 ```
-$ python bgp.py D:\dataset\line49nodes.mtx 49 48 True
+$ python bgp.py D:\dataset\squaredIdealBurn7.mtx 231 418 True
 ```
 
 The output shows a burning sequence and its length. The running time of the initialization phase (Floyd Warshall algorithm) and the running time of the 'burning greedy permutation' algorithm is showed too.
 
 ```
----Floyd-Warshall running time: 0.10028624534606934 seconds ---
-burning sequence: [39, 0, 19, 29, 9, 48, 14, 24]
-burning sequence length: 8
----BGP running time: 0.03125739097595215 seconds ---
+---Compute all shortest paths - running time: 0.17345452308654785 seconds ---
+burning sequence: [30, 142, 226, 101, 166, 63, 205, 51, 112, 0]
+burning sequence length: 10
+---BGP running time: 1.616149663925171 seconds ---
 ```
 
 # Contact
