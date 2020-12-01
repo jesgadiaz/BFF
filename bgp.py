@@ -29,6 +29,8 @@ def createGraph(input_file):
             list.append(sp[i][j])
         d.append(list)
         
+    del sp
+        
     print("---Compute all shortest paths - running time: %s seconds ---" % (time.time() - start_time))
     
 def update_distance():
