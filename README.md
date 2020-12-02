@@ -49,7 +49,7 @@ burning sequence: [30, 142, 226, 101, 166, 63, 205, 51, 112, 0]
 burning sequence length: 10
 ---BGP running time: 1.616149663925171 seconds ---
 ```
-#Preprint
+# Preprint
 
 Jesús García Díaz, A 3-2/b(G)-approximation algorithm for the graph burning problem
 https://arxiv.org/abs/2011.15019
