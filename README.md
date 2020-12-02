@@ -23,31 +23,31 @@ By setting plus to True, the algorithm is repeated n times and the best solution
 ## Example 1
 
 ```
-$ python bgp.py D:\dataset\squaredIdealBurn7.mtx 231 418 False
+$ python bgp.py D:\dataset\econ-mahindas.mtx 1258 7513 False
 ```
 
 The output shows a burning sequence and its length. The running time of the initialization phase and the running time of the 'burning greedy permutation' algorithm is showed too.
 
 ```
----Compute all shortest paths - running time: 0.18633675575256348 seconds ---
-burning sequence: [96, 101, 222, 0, 25, 109, 142, 179, 187, 23]
-burning sequence length: 10
----BGP running time: 0.0 seconds ---
+---Compute all shortest paths - running time: 13.222469329833984 seconds ---
+burning sequence: [110, 551, 607, 523, 540, 546, 549]
+burning sequence length: 7
+---BGP running time: 0.15363645553588867 seconds ---
 ```
 
 ## Example 2
 
 ```
-$ python bgp.py D:\dataset\squaredIdealBurn7.mtx 231 418 True
+$ python bgp.py D:\dataset\econ-mahindas.mtx 1258 7513 True
 ```
 
 The output shows a burning sequence and its length. The running time of the initialization phase and the running time of the 'burning greedy permutation' algorithm is showed too.
 
 ```
----Compute all shortest paths - running time: 0.17345452308654785 seconds ---
-burning sequence: [30, 142, 226, 101, 166, 63, 205, 51, 112, 0]
-burning sequence length: 10
----BGP running time: 1.616149663925171 seconds ---
+---Compute all shortest paths - running time: 14.913883447647095 seconds ---
+burning sequence: [989, 554, 555, 50, 51]
+burning sequence length: 5
+---BGP running time: 210.62542939186096 seconds ---
 ```
 # Preprint
 
