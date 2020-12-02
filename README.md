@@ -26,7 +26,7 @@ By setting plus to True, the algorithm is repeated n times and the best solution
 $ python bgp.py D:\dataset\squaredIdealBurn7.mtx 231 418 False
 ```
 
-The output shows a burning sequence and its length. The running time of the initialization phase (Floyd Warshall algorithm) and the running time of the 'burning greedy permutation' algorithm is showed too.
+The output shows a burning sequence and its length. The running time of the initialization phase and the running time of the 'burning greedy permutation' algorithm is showed too.
 
 ```
 ---Compute all shortest paths - running time: 0.18633675575256348 seconds ---
@@ -41,7 +41,7 @@ burning sequence length: 10
 $ python bgp.py D:\dataset\squaredIdealBurn7.mtx 231 418 True
 ```
 
-The output shows a burning sequence and its length. The running time of the initialization phase (Floyd Warshall algorithm) and the running time of the 'burning greedy permutation' algorithm is showed too.
+The output shows a burning sequence and its length. The running time of the initialization phase and the running time of the 'burning greedy permutation' algorithm is showed too.
 
 ```
 ---Compute all shortest paths - running time: 0.17345452308654785 seconds ---
