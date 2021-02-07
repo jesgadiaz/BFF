@@ -17,7 +17,7 @@ $ python bff.py {instance} {n} {m} {plus}
 | `{instance}` | (string) Instance file path                                    |
 | `{n}`    | (integer) Number of vertices  |
 | `{m}`    | (integer) Number of edges  |
-| `{plus}`    | (string) for bgp set 'False'. For bgp+ set 'True'  |
+| `{plus}`    | (string) for bff set 'False'. For bff+ set 'True'  |
 
 By setting plus to True, the algorithm is repeated n times and the best solution is returned.
 
