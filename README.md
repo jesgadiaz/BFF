@@ -1,12 +1,13 @@
-# Approximation algorithm for the graph burning problem
+# Burning Farthest-First algorithm 
+# An approximation algorithm for the graph burning problem
 This repository contains a Python implementation of the 'burning greedy permutation' algorithm. The approximation factor of this algorithm is 3-2/b(G). 
 
 ## Running the algorithm
 
-To execute the 'burning greedy permutation' algorithm (bgp.py) run the following command on a Terminal.
+To execute the 'burning farthest-first' algorithm (bff.py) run the following command on a Terminal.
 
 ```
-$ python bgp.py {instance} {n} {m} {plus}
+$ python bff.py {instance} {n} {m} {plus}
 ```
 
 ### Where,
@@ -23,31 +24,31 @@ By setting plus to True, the algorithm is repeated n times and the best solution
 ## Example 1
 
 ```
-$ python bgp.py D:\dataset\econ-mahindas.mtx 1258 7513 False
+$ python bff.py D:\dataset\econ-mahindas.mtx 1258 7513 False
 ```
 
-The output shows a burning sequence and its length. The running time of the initialization phase and the running time of the 'burning greedy permutation' algorithm is showed too.
+The output shows a burning sequence and its length. The running time of the initialization phase and the running time of the 'burning frthest-first' algorithm is showed too.
 
 ```
 ---Compute all shortest paths - running time: 13.222469329833984 seconds ---
 burning sequence: [110, 551, 607, 523, 540, 546, 549]
 burning sequence length: 7
----BGP running time: 0.15363645553588867 seconds ---
+---BFF running time: 0.15363645553588867 seconds ---
 ```
 
 ## Example 2
 
 ```
-$ python bgp.py D:\dataset\econ-mahindas.mtx 1258 7513 True
+$ python bff.py D:\dataset\econ-mahindas.mtx 1258 7513 True
 ```
 
-The output shows a burning sequence and its length. The running time of the initialization phase and the running time of the 'burning greedy permutation' algorithm is showed too.
+The output shows a burning sequence and its length. The running time of the initialization phase and the running time of the 'burning farthest-first' algorithm is showed too.
 
 ```
 ---Compute all shortest paths - running time: 14.913883447647095 seconds ---
 burning sequence: [989, 554, 555, 50, 51]
 burning sequence length: 5
----BGP running time: 210.62542939186096 seconds ---
+---BFF running time: 210.62542939186096 seconds ---
 ```
 # Preprint
 
