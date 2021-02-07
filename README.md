@@ -52,7 +52,7 @@ burning sequence length: 5
 ```
 # Preprint
 
-Jesús García Díaz, A 3-2/b(G)-approximation algorithm for the graph burning problem, https://arxiv.org/abs/2011.15019
+Jesús García Díaz, A simple approximation algorithm for the graph burning problem, https://arxiv.org/abs/2011.15019
 
 # Contact
 
