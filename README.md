@@ -1,6 +1,6 @@
 # Burning Farthest-First algorithm 
 # An approximation algorithm for the graph burning problem
-This repository contains a Python implementation of the 'burning greedy permutation' algorithm. The approximation factor of this algorithm is 3-2/b(G). 
+This repository contains a Python implementation of the 'burning farthest-first' algorithm. The approximation factor of this algorithm is 3-2/b(G). 
 
 ## Running the algorithm
 
