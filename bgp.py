@@ -111,4 +111,4 @@ if __name__ == "__main__":
     sequence = run()
     print("burning sequence: " + str(sequence))
     print("burning sequence length: " + str(len(sequence)))
-    print("---BGP running time: %s seconds ---" % (time.time() - start_time))
+    print("---BFF running time: %s seconds ---" % (time.time() - start_time))
