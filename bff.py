@@ -5,7 +5,6 @@ import networkx as nx
 
 def createGraph(input_file):
     global G, n, m, d, start_time
-    
     G = nx.Graph()
     for j in range(0,n):
         G.add_node(j)
@@ -18,19 +17,64 @@ def createGraph(input_file):
         j = int(string[0])-1
         k = int(string[1])-1
         G.add_edge(j, k)
-    f.close()
-        
-    sp = dict(nx.all_pairs_shortest_path_length(G))
+    f.close()           
+
+    if nx.is_connected(G):
+        sp = dict(nx.all_pairs_shortest_path_length(G))
+        d = []
+        for i in range(0,n):
+            list = []
+            for j in range(0,n):
+                list.append(sp[i][j])
+            d.append(list)
+        for i in range(0, n):
+            for j in range(0, n):
+                if d[i][j] == float("inf"):
+                    d[i][j] = (n+1);
+        del sp
+    else:
+        d = []
+        for i in range(0,n):
+            list = []
+            for j in range(0,n):
+                list.append(float("inf"))
+            d.append(list)
+        connected_components = nx.connected_components(G)
+        for component in connected_components:
+            # create subgraph    
+            G_sub = nx.Graph()
+            for v in component:
+                G_sub.add_node(v)
+                for e in G.edges:
+                    if e[0]==v or e[1]==v:
+                        G_sub.add_edge(e[0],e[1])
+            
+            sp = dict(nx.all_pairs_shortest_path_length(G_sub))
+            for item1 in sp.items():
+                for item2 in item1[1].items():
+                    d[item1[0]][item2[0]] = item2[1]
+                    d[item2[0]][item1[0]] = item2[1]
+            del G_sub
+            del sp
+            
+        for i in range(0, n):
+            for j in range(0, n):
+                if d[i][j] == float("inf"):
+                    d[i][j] = (n+1)
     
-    d = []
-    for i in range(0,n):
-        list = []
-        for j in range(0,n):
-            list.append(sp[i][j])
-        d.append(list)
-        
-    del sp
-        
+    conn_comp = nx.number_connected_components(G)
+    n_nodes   = len(nx.nodes(G))
+    n_edges   = len(nx.edges(G))
+    av_degree = 0
+    for e in nx.degree(G):
+        av_degree = av_degree + e[1]
+    av_degree = av_degree / n_nodes
+    density   = nx.density(G)
+    print("conn. comp.: " + str(conn_comp))
+    print("num vertices: " + str(n_nodes))
+    print("num edges: " + str(n_edges))
+    print("density: " + str(density))
+    print("av degree: " + str(av_degree))        
     print("---Compute all shortest paths - running time: %s seconds ---" % (time.time() - start_time))
     
 def update_distance():
