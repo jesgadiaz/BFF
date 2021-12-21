@@ -5,7 +5,7 @@ This repository contains a Python implementation of the 'burning farthest-first'
 ## We strongly recommend to use the following C++ implementation (it is much faster)
 https://github.com/alex-cornejo/bff_alg
 
-However, if you prefer the Python implementation continue reading.
+However, if you prefer the Python implementation, continue reading.
 
 ## Running the algorithm
 
