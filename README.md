@@ -1,9 +1,9 @@
-# A more efficiente implementation (C++)
-https://github.com/alex-cornejo/bff_alg
-
 # Burning Farthest-First algorithm 
 # An approximation algorithm for the graph burning problem
 This repository contains a Python implementation of the 'burning farthest-first' algorithm. The approximation factor of this algorithm is 3-2/b(G). 
+
+# A more efficiente implementation (C++)
+https://github.com/alex-cornejo/bff_alg
 
 ## Running the algorithm
 
