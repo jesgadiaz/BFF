@@ -57,7 +57,7 @@ burning sequence length: 5
 ```
 # Preprint
 
-Jesús García Díaz, Burning Graphs Through Farthest-First Traversal, https://arxiv.org/abs/2011.15019
+Burning Graphs Through Farthest-First Traversal, https://arxiv.org/abs/2011.15019
 
 # Contact
 
